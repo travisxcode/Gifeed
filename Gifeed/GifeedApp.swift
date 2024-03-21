@@ -4,9 +4,9 @@ import SwiftUI
 
 @main
 struct GifeedApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
     }
+  }
 }
