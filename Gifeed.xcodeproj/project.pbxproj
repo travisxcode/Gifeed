@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		169513EC2BACED84004A11D5 /* GifeedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169513EB2BACED84004A11D5 /* GifeedApp.swift */; };
+		169513EE2BACED84004A11D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169513ED2BACED84004A11D5 /* ContentView.swift */; };
+		169513F02BACED86004A11D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169513EF2BACED86004A11D5 /* Assets.xcassets */; };
+		169513F32BACED86004A11D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169513F22BACED86004A11D5 /* Preview Assets.xcassets */; };
+		169513FD2BACED87004A11D5 /* GifeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169513FC2BACED87004A11D5 /* GifeedTests.swift */; };
+		169514072BACED87004A11D5 /* GifeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514062BACED87004A11D5 /* GifeedUITests.swift */; };
+		169514092BACED87004A11D5 /* GifeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		169513F92BACED87004A11D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 169513E02BACED84004A11D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 169513E72BACED84004A11D5;
+			remoteInfo = Gifeed;
+		};
+		169514032BACED87004A11D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 169513E02BACED84004A11D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 169513E72BACED84004A11D5;
+			remoteInfo = Gifeed;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		169513E82BACED84004A11D5 /* Gifeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		169513EB2BACED84004A11D5 /* GifeedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedApp.swift; sourceTree = "<group>"; };
+		169513ED2BACED84004A11D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		169513EF2BACED86004A11D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		169513F22BACED86004A11D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		169513F82BACED87004A11D5 /* GifeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		169513FC2BACED87004A11D5 /* GifeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedTests.swift; sourceTree = "<group>"; };
+		169514022BACED87004A11D5 /* GifeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		169514062BACED87004A11D5 /* GifeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedUITests.swift; sourceTree = "<group>"; };
+		169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		169513E52BACED84004A11D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169513F52BACED87004A11D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169513FF2BACED87004A11D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		169513DF2BACED84004A11D5 = {
+			isa = PBXGroup;
+			children = (
+				169513EA2BACED84004A11D5 /* Gifeed */,
+				169513FB2BACED87004A11D5 /* GifeedTests */,
+				169514052BACED87004A11D5 /* GifeedUITests */,
+				169513E92BACED84004A11D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		169513E92BACED84004A11D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				169513E82BACED84004A11D5 /* Gifeed.app */,
+				169513F82BACED87004A11D5 /* GifeedTests.xctest */,
+				169514022BACED87004A11D5 /* GifeedUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		169513EA2BACED84004A11D5 /* Gifeed */ = {
+			isa = PBXGroup;
+			children = (
+				169513EB2BACED84004A11D5 /* GifeedApp.swift */,
+				169513ED2BACED84004A11D5 /* ContentView.swift */,
+				169513EF2BACED86004A11D5 /* Assets.xcassets */,
+				169513F12BACED86004A11D5 /* Preview Content */,
+			);
+			path = Gifeed;
+			sourceTree = "<group>";
+		};
+		169513F12BACED86004A11D5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				169513F22BACED86004A11D5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		169513FB2BACED87004A11D5 /* GifeedTests */ = {
+			isa = PBXGroup;
+			children = (
+				169513FC2BACED87004A11D5 /* GifeedTests.swift */,
+			);
+			path = GifeedTests;
+			sourceTree = "<group>";
+		};
+		169514052BACED87004A11D5 /* GifeedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				169514062BACED87004A11D5 /* GifeedUITests.swift */,
+				169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */,
+			);
+			path = GifeedUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		169513E72BACED84004A11D5 /* Gifeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1695140C2BACED87004A11D5 /* Build configuration list for PBXNativeTarget "Gifeed" */;
+			buildPhases = (
+				169513E42BACED84004A11D5 /* Sources */,
+				169513E52BACED84004A11D5 /* Frameworks */,
+				169513E62BACED84004A11D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gifeed;
+			productName = Gifeed;
+			productReference = 169513E82BACED84004A11D5 /* Gifeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		169513F72BACED87004A11D5 /* GifeedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1695140F2BACED87004A11D5 /* Build configuration list for PBXNativeTarget "GifeedTests" */;
+			buildPhases = (
+				169513F42BACED87004A11D5 /* Sources */,
+				169513F52BACED87004A11D5 /* Frameworks */,
+				169513F62BACED87004A11D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				169513FA2BACED87004A11D5 /* PBXTargetDependency */,
+			);
+			name = GifeedTests;
+			productName = GifeedTests;
+			productReference = 169513F82BACED87004A11D5 /* GifeedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		169514012BACED87004A11D5 /* GifeedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 169514122BACED87004A11D5 /* Build configuration list for PBXNativeTarget "GifeedUITests" */;
+			buildPhases = (
+				169513FE2BACED87004A11D5 /* Sources */,
+				169513FF2BACED87004A11D5 /* Frameworks */,
+				169514002BACED87004A11D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				169514042BACED87004A11D5 /* PBXTargetDependency */,
+			);
+			name = GifeedUITests;
+			productName = GifeedUITests;
+			productReference = 169514022BACED87004A11D5 /* GifeedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		169513E02BACED84004A11D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					169513E72BACED84004A11D5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					169513F72BACED87004A11D5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 169513E72BACED84004A11D5;
+					};
+					169514012BACED87004A11D5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 169513E72BACED84004A11D5;
+					};
+				};
+			};
+			buildConfigurationList = 169513E32BACED84004A11D5 /* Build configuration list for PBXProject "Gifeed" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 169513DF2BACED84004A11D5;
+			productRefGroup = 169513E92BACED84004A11D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				169513E72BACED84004A11D5 /* Gifeed */,
+				169513F72BACED87004A11D5 /* GifeedTests */,
+				169514012BACED87004A11D5 /* GifeedUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		169513E62BACED84004A11D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169513F32BACED86004A11D5 /* Preview Assets.xcassets in Resources */,
+				169513F02BACED86004A11D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169513F62BACED87004A11D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169514002BACED87004A11D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		169513E42BACED84004A11D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169513EE2BACED84004A11D5 /* ContentView.swift in Sources */,
+				169513EC2BACED84004A11D5 /* GifeedApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169513F42BACED87004A11D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169513FD2BACED87004A11D5 /* GifeedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		169513FE2BACED87004A11D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				169514092BACED87004A11D5 /* GifeedUITestsLaunchTests.swift in Sources */,
+				169514072BACED87004A11D5 /* GifeedUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		169513FA2BACED87004A11D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 169513E72BACED84004A11D5 /* Gifeed */;
+			targetProxy = 169513F92BACED87004A11D5 /* PBXContainerItemProxy */;
+		};
+		169514042BACED87004A11D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 169513E72BACED84004A11D5 /* Gifeed */;
+			targetProxy = 169514032BACED87004A11D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1695140A2BACED87004A11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1695140B2BACED87004A11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1695140D2BACED87004A11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gifeed/Preview Content\"";
+				DEVELOPMENT_TEAM = 2W9LPF538W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevis.Gifeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1695140E2BACED87004A11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gifeed/Preview Content\"";
+				DEVELOPMENT_TEAM = 2W9LPF538W;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevis.Gifeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		169514102BACED87004A11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2W9LPF538W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevis.GifeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gifeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gifeed";
+			};
+			name = Debug;
+		};
+		169514112BACED87004A11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2W9LPF538W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevis.GifeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gifeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Gifeed";
+			};
+			name = Release;
+		};
+		169514132BACED87004A11D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2W9LPF538W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevis.GifeedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gifeed;
+			};
+			name = Debug;
+		};
+		169514142BACED87004A11D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2W9LPF538W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.trevis.GifeedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gifeed;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		169513E32BACED84004A11D5 /* Build configuration list for PBXProject "Gifeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1695140A2BACED87004A11D5 /* Debug */,
+				1695140B2BACED87004A11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1695140C2BACED87004A11D5 /* Build configuration list for PBXNativeTarget "Gifeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1695140D2BACED87004A11D5 /* Debug */,
+				1695140E2BACED87004A11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1695140F2BACED87004A11D5 /* Build configuration list for PBXNativeTarget "GifeedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				169514102BACED87004A11D5 /* Debug */,
+				169514112BACED87004A11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		169514122BACED87004A11D5 /* Build configuration list for PBXNativeTarget "GifeedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				169514132BACED87004A11D5 /* Debug */,
+				169514142BACED87004A11D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 169513E02BACED84004A11D5 /* Project object */;
+}
