@@ -14,6 +14,11 @@
 		169513FD2BACED87004A11D5 /* GifeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169513FC2BACED87004A11D5 /* GifeedTests.swift */; };
 		169514072BACED87004A11D5 /* GifeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514062BACED87004A11D5 /* GifeedUITests.swift */; };
 		169514092BACED87004A11D5 /* GifeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */; };
+		169514212BAD0392004A11D5 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514202BAD0392004A11D5 /* FeedView.swift */; };
+		169514232BAD0399004A11D5 /* FeedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514222BAD0399004A11D5 /* FeedCardView.swift */; };
+		169514252BAD2198004A11D5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 169514242BAD2198004A11D5 /* ComposableArchitecture */; };
+		169514282BAD2827004A11D5 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514272BAD2827004A11D5 /* Asset.swift */; };
+		1695142A2BAD2835004A11D5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514292BAD2835004A11D5 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 		169514022BACED87004A11D5 /* GifeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GifeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		169514062BACED87004A11D5 /* GifeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedUITests.swift; sourceTree = "<group>"; };
 		169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		169514202BAD0392004A11D5 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		169514222BAD0399004A11D5 /* FeedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCardView.swift; sourceTree = "<group>"; };
+		169514272BAD2827004A11D5 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		169514292BAD2835004A11D5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				169514252BAD2198004A11D5 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +104,8 @@
 		169513EA2BACED84004A11D5 /* Gifeed */ = {
 			isa = PBXGroup;
 			children = (
+				169514262BAD281C004A11D5 /* Asset */,
+				1695141F2BAD038B004A11D5 /* Feed */,
 				169513EB2BACED84004A11D5 /* GifeedApp.swift */,
 				169513ED2BACED84004A11D5 /* ContentView.swift */,
 				169513EF2BACED86004A11D5 /* Assets.xcassets */,
@@ -127,6 +139,24 @@
 			path = GifeedUITests;
 			sourceTree = "<group>";
 		};
+		1695141F2BAD038B004A11D5 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				169514202BAD0392004A11D5 /* FeedView.swift */,
+				169514222BAD0399004A11D5 /* FeedCardView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		169514262BAD281C004A11D5 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				169514272BAD2827004A11D5 /* Asset.swift */,
+				169514292BAD2835004A11D5 /* Image.swift */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +173,9 @@
 			dependencies = (
 			);
 			name = Gifeed;
+			packageProductDependencies = (
+				169514242BAD2198004A11D5 /* ComposableArchitecture */,
+			);
 			productName = Gifeed;
 			productReference = 169513E82BACED84004A11D5 /* Gifeed.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				169513EE2BACED84004A11D5 /* ContentView.swift in Sources */,
+				1695142A2BAD2835004A11D5 /* Image.swift in Sources */,
+				169514212BAD0392004A11D5 /* FeedView.swift in Sources */,
+				169514282BAD2827004A11D5 /* Asset.swift in Sources */,
+				169514232BAD0399004A11D5 /* FeedCardView.swift in Sources */,
 				169513EC2BACED84004A11D5 /* GifeedApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -602,6 +639,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		169514242BAD2198004A11D5 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 169514152BACFC6B004A11D5 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 169513E02BACED84004A11D5 /* Project object */;
 }
