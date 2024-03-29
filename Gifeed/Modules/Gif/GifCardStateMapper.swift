@@ -2,7 +2,7 @@
 
 import Foundation
 
-extension FeedCard.State {
+extension GifCard.State {
   struct Mapper {
     static var dateFormatter: DateFormatter {
       let inputFormatter = DateFormatter()
@@ -10,8 +10,8 @@ extension FeedCard.State {
       return inputFormatter
     }
     
-    static func map(_ gif: Gif) -> FeedCard.State {
-      FeedCard.State(
+    static func map(_ gif: Gif) -> GifCard.State {
+      GifCard.State(
         user: gif.user,
         gifId: gif.id,
         gifUrl: gif.images.original.url,
