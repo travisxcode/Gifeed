@@ -7,8 +7,8 @@ import SwiftUI
 struct GifeedApp: App {
   var body: some Scene {
     WindowGroup {
-      FeedView(store: Store(initialState: Feed.State()) {
-        Feed()
+      MainTabBarView(store: Store(initialState: MainTabBar.State()) {
+        MainTabBar()
       }).preferredColorScheme(.dark)
     }
   }

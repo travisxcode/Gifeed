@@ -8,14 +8,27 @@ typealias APIKey = String
 let GiphyApiKey: APIKey = "6xr0s2viYs1cjsCoTmaUDEJSEAPBH2xv"
 
 struct TrendingClient {
-  var trending: @Sendable () async throws -> [Gif]
+  var gifs: @Sendable () async throws -> [Gif]
+  var stickers: @Sendable () async throws -> [Gif]
 }
 
 extension TrendingClient: DependencyKey {
   static let liveValue = Self(
-    trending: {
+    gifs: {
       let (data, _) = try await URLSession.shared
         .data(from: URL(string: "https://api.giphy.com/v1/gifs/trending?api_key=\(GiphyApiKey)")!)
+      do {
+        let products = try trendingJsonDecoder.decode(TrendingClient.Response.self, from: data)
+        return products.data
+      } catch {
+        // Print out the error causing the decoding to fail
+        print("Failed to decode TrendingClient.Response: \(error)")
+        throw error
+      }
+    },
+    stickers: {
+      let (data, _) = try await URLSession.shared
+        .data(from: URL(string: "https://api.giphy.com/v1/stickers/trending?api_key=\(GiphyApiKey)")!)
       do {
         let products = try trendingJsonDecoder.decode(TrendingClient.Response.self, from: data)
         return products.data

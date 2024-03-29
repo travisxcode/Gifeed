@@ -4,7 +4,7 @@ import SwiftUI
 import ComposableArchitecture
 
 @Reducer
-struct FeedCard {
+struct GifCard {
   @ObservableState
   struct State: Identifiable {
     var id: String { gifId }
@@ -21,8 +21,8 @@ struct FeedCard {
   }
 }
 
-struct FeedCardView: View {
-  @Bindable var store: StoreOf<FeedCard>
+struct GifCardView: View {
+  @Bindable var store: StoreOf<GifCard>
   
   var body: some View {
     VStack {
@@ -83,9 +83,9 @@ struct FeedCardView: View {
 }
 
 #Preview {
-  FeedCardView(
+  GifCardView(
     store: Store(
-      initialState: FeedCard.State(
+      initialState: GifCard.State(
         user: User(
           avatarUrl: "https://media0.giphy.com/avatars/IntoAction/wTEVurMl2S4g.png",
           username: "IntoAction",
@@ -97,7 +97,7 @@ struct FeedCardView: View {
         trendingDateTime: "Just now"
       )
     ) {
-      FeedCard()
+      GifCard()
     }
   )
 }

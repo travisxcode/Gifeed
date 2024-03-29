@@ -5,14 +5,14 @@ import ComposableArchitecture
 import SwiftUI
 
 @Reducer
-struct Feed {
+struct Gifs {
   @ObservableState
   struct State {
-    var feedCards = IdentifiedArrayOf<FeedCard.State>()
+    var gifCards = IdentifiedArrayOf<GifCard.State>()
   }
   
   enum Action {
-    case feedCards(IdentifiedActionOf<FeedCard>)
+    case gifCards(IdentifiedActionOf<GifCard>)
     case fetchTrending
     case fetchTrendingSuccess([Gif])
   }
@@ -22,35 +22,35 @@ struct Feed {
   var body: some Reducer<State, Action> {
     Reduce { state, action in
       switch action {
-      case .feedCards:
+      case .gifCards:
         return .none
       case .fetchTrending:
         return .run { send in
-          if let gifs = try? await self.trendingClient.trending() {
+          if let gifs = try? await self.trendingClient.gifs() {
             await send(.fetchTrendingSuccess(gifs))
           }
         }
       case .fetchTrendingSuccess(let gifs):
         gifs
-          .map { FeedCard.State.Mapper.map($0) }
-          .forEach { state.feedCards.insert($0, at: .zero) }
+          .map { GifCard.State.Mapper.map($0) }
+          .forEach { state.gifCards.insert($0, at: .zero) }
         return .none
       }
     }
-    .forEach(\.feedCards, action: \.feedCards) {
-      FeedCard()
+    .forEach(\.gifCards, action: \.gifCards) {
+      GifCard()
     }
   }
 }
 
-struct FeedView: View {
-  var store: StoreOf<Feed>
+struct GifsView: View {
+  var store: StoreOf<Gifs>
   
   var body: some View {
     ScrollView() {
       VStack(spacing: .zero) {
-        ForEach(store.scope(state: \.feedCards, action: \.feedCards)) { store in
-          FeedCardView(store: store)
+        ForEach(store.scope(state: \.gifCards, action: \.gifCards)) { store in
+          GifCardView(store: store)
         }
       }
     }
@@ -62,9 +62,9 @@ struct FeedView: View {
 }
 
 #Preview {
-  FeedView(
-    store: Store(initialState: Feed.State()) {
-      Feed()
+  GifsView(
+    store: Store(initialState: Gifs.State()) {
+      Gifs()
     }
   )
 }
