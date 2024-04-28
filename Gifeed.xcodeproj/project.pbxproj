@@ -14,7 +14,6 @@
 		169514072BACED87004A11D5 /* GifeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514062BACED87004A11D5 /* GifeedUITests.swift */; };
 		169514092BACED87004A11D5 /* GifeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */; };
 		169514212BAD0392004A11D5 /* GifsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514202BAD0392004A11D5 /* GifsView.swift */; };
-		169514232BAD0399004A11D5 /* GifCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514222BAD0399004A11D5 /* GifCardView.swift */; };
 		169514252BAD2198004A11D5 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 169514242BAD2198004A11D5 /* ComposableArchitecture */; };
 		169514282BAD2827004A11D5 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514272BAD2827004A11D5 /* Asset.swift */; };
 		1695142A2BAD2835004A11D5 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514292BAD2835004A11D5 /* Image.swift */; };
@@ -24,14 +23,17 @@
 		169514392BAFA4BA004A11D5 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514382BAFA4BA004A11D5 /* Gif.swift */; };
 		1695143B2BAFA4D5004A11D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695143A2BAFA4D4004A11D5 /* User.swift */; };
 		1695143E2BAFAC6A004A11D5 /* TrendingClientMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695143D2BAFAC6A004A11D5 /* TrendingClientMocks.swift */; };
-		169514402BB11297004A11D5 /* GifCardStateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695143F2BB11297004A11D5 /* GifCardStateMapper.swift */; };
 		169514432BB115C5004A11D5 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514422BB115C5004A11D5 /* AsyncImageView.swift */; };
 		169514452BB12235004A11D5 /* ImageCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514442BB12235004A11D5 /* ImageCacheRepository.swift */; };
 		169514492BB2E4B8004A11D5 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514482BB2E4B8004A11D5 /* MainTabBarView.swift */; };
-		1695144C2BB3B9EE004A11D5 /* StickersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144B2BB3B9EE004A11D5 /* StickersView.swift */; };
-		1695144E2BB3BD0A004A11D5 /* StickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144D2BB3BD0A004A11D5 /* StickerItemView.swift */; };
-		169514502BB3C2C1004A11D5 /* StickerItemStateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144F2BB3C2C1004A11D5 /* StickerItemStateMapper.swift */; };
+		1695144E2BB3BD0A004A11D5 /* GifItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144D2BB3BD0A004A11D5 /* GifItemView.swift */; };
+		169514502BB3C2C1004A11D5 /* GifItemStateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144F2BB3C2C1004A11D5 /* GifItemStateMapper.swift */; };
 		169514542BB3FEC9004A11D5 /* WaterfallGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */; };
+		16B9CE592BDDF64000AB891D /* SearchGifsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B9CE582BDDF64000AB891D /* SearchGifsView.swift */; };
+		16B9CE5C2BDEB65B00AB891D /* SearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B9CE5B2BDEB65B00AB891D /* SearchClient.swift */; };
+		16FCB93F2BC540B200305553 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCB93E2BC540B200305553 /* SearchBarView.swift */; };
+		16FCB9412BC545A200305553 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCB9402BC545A200305553 /* SearchView.swift */; };
+		16FCB9432BC5525400305553 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCB9422BC5525400305553 /* SearchHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +64,6 @@
 		169514062BACED87004A11D5 /* GifeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedUITests.swift; sourceTree = "<group>"; };
 		169514082BACED87004A11D5 /* GifeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		169514202BAD0392004A11D5 /* GifsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifsView.swift; sourceTree = "<group>"; };
-		169514222BAD0399004A11D5 /* GifCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCardView.swift; sourceTree = "<group>"; };
 		169514272BAD2827004A11D5 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		169514292BAD2835004A11D5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		1695142C2BAE652F004A11D5 /* TrendingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingClient.swift; sourceTree = "<group>"; };
@@ -71,14 +72,17 @@
 		169514382BAFA4BA004A11D5 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		1695143A2BAFA4D4004A11D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1695143D2BAFAC6A004A11D5 /* TrendingClientMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingClientMocks.swift; sourceTree = "<group>"; };
-		1695143F2BB11297004A11D5 /* GifCardStateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifCardStateMapper.swift; sourceTree = "<group>"; };
 		169514422BB115C5004A11D5 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		169514442BB12235004A11D5 /* ImageCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheRepository.swift; sourceTree = "<group>"; };
 		169514482BB2E4B8004A11D5 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
-		1695144B2BB3B9EE004A11D5 /* StickersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersView.swift; sourceTree = "<group>"; };
-		1695144D2BB3BD0A004A11D5 /* StickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerItemView.swift; sourceTree = "<group>"; };
-		1695144F2BB3C2C1004A11D5 /* StickerItemStateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerItemStateMapper.swift; sourceTree = "<group>"; };
+		1695144D2BB3BD0A004A11D5 /* GifItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifItemView.swift; sourceTree = "<group>"; };
+		1695144F2BB3C2C1004A11D5 /* GifItemStateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifItemStateMapper.swift; sourceTree = "<group>"; };
 		169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridView.swift; sourceTree = "<group>"; };
+		16B9CE582BDDF64000AB891D /* SearchGifsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifsView.swift; sourceTree = "<group>"; };
+		16B9CE5B2BDEB65B00AB891D /* SearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClient.swift; sourceTree = "<group>"; };
+		16FCB93E2BC540B200305553 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		16FCB9402BC545A200305553 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		16FCB9422BC5525400305553 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,14 +171,15 @@
 			path = GifeedUITests;
 			sourceTree = "<group>";
 		};
-		1695141F2BAD038B004A11D5 /* Gif */ = {
+		1695141F2BAD038B004A11D5 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				1695144D2BB3BD0A004A11D5 /* GifItemView.swift */,
+				1695144F2BB3C2C1004A11D5 /* GifItemStateMapper.swift */,
+				169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */,
 				169514202BAD0392004A11D5 /* GifsView.swift */,
-				169514222BAD0399004A11D5 /* GifCardView.swift */,
-				1695143F2BB11297004A11D5 /* GifCardStateMapper.swift */,
 			);
-			path = Gif;
+			path = Gifs;
 			sourceTree = "<group>";
 		};
 		169514262BAD281C004A11D5 /* Asset */ = {
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				169514372BAFA4AC004A11D5 /* Models */,
+				16B9CE5A2BDEB64200AB891D /* Search */,
 				1695142E2BAE675A004A11D5 /* Trending */,
 			);
 			path = Network;
@@ -251,21 +257,29 @@
 			isa = PBXGroup;
 			children = (
 				169514462BB2BE85004A11D5 /* Components */,
-				1695144A2BB3B9D7004A11D5 /* Sticker */,
-				1695141F2BAD038B004A11D5 /* Gif */,
+				1695141F2BAD038B004A11D5 /* Gifs */,
+				16FCB93D2BC528D600305553 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		1695144A2BB3B9D7004A11D5 /* Sticker */ = {
+		16B9CE5A2BDEB64200AB891D /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				1695144B2BB3B9EE004A11D5 /* StickersView.swift */,
-				1695144D2BB3BD0A004A11D5 /* StickerItemView.swift */,
-				1695144F2BB3C2C1004A11D5 /* StickerItemStateMapper.swift */,
-				169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */,
+				16B9CE5B2BDEB65B00AB891D /* SearchClient.swift */,
 			);
-			path = Sticker;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		16FCB93D2BC528D600305553 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				16FCB9402BC545A200305553 /* SearchView.swift */,
+				16B9CE582BDDF64000AB891D /* SearchGifsView.swift */,
+				16FCB93E2BC540B200305553 /* SearchBarView.swift */,
+				16FCB9422BC5525400305553 /* SearchHeaderView.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,24 +419,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				169514432BB115C5004A11D5 /* AsyncImageView.swift in Sources */,
-				169514502BB3C2C1004A11D5 /* StickerItemStateMapper.swift in Sources */,
+				169514502BB3C2C1004A11D5 /* GifItemStateMapper.swift in Sources */,
 				1695142A2BAD2835004A11D5 /* Image.swift in Sources */,
 				169514312BAF62B1004A11D5 /* GifWebView.swift in Sources */,
+				16FCB9432BC5525400305553 /* SearchHeaderView.swift in Sources */,
+				16B9CE592BDDF64000AB891D /* SearchGifsView.swift in Sources */,
 				169514492BB2E4B8004A11D5 /* MainTabBarView.swift in Sources */,
 				169514212BAD0392004A11D5 /* GifsView.swift in Sources */,
 				169514542BB3FEC9004A11D5 /* WaterfallGridView.swift in Sources */,
 				169514342BAF6513004A11D5 /* GifCacheRepository.swift in Sources */,
 				169514392BAFA4BA004A11D5 /* Gif.swift in Sources */,
 				1695142D2BAE652F004A11D5 /* TrendingClient.swift in Sources */,
+				16FCB9412BC545A200305553 /* SearchView.swift in Sources */,
 				169514282BAD2827004A11D5 /* Asset.swift in Sources */,
-				169514232BAD0399004A11D5 /* GifCardView.swift in Sources */,
-				169514402BB11297004A11D5 /* GifCardStateMapper.swift in Sources */,
 				169513EC2BACED84004A11D5 /* GifeedApp.swift in Sources */,
-				1695144C2BB3B9EE004A11D5 /* StickersView.swift in Sources */,
 				1695143E2BAFAC6A004A11D5 /* TrendingClientMocks.swift in Sources */,
 				169514452BB12235004A11D5 /* ImageCacheRepository.swift in Sources */,
+				16B9CE5C2BDEB65B00AB891D /* SearchClient.swift in Sources */,
 				1695143B2BAFA4D5004A11D5 /* User.swift in Sources */,
-				1695144E2BB3BD0A004A11D5 /* StickerItemView.swift in Sources */,
+				16FCB93F2BC540B200305553 /* SearchBarView.swift in Sources */,
+				1695144E2BB3BD0A004A11D5 /* GifItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

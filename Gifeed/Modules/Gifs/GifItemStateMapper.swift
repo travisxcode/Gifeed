@@ -2,10 +2,10 @@
 
 import Foundation
 
-extension StickerItem.State {
+extension GifItem.State {
   struct Mapper {
-    static func map(_ gif: Gif) -> StickerItem.State {
-      StickerItem.State(
+    static func map(_ gif: Gif) -> GifItem.State {
+      GifItem.State(
         gifId: gif.id,
         user: gif.user,
         gifUrl: gif.images.original.url,

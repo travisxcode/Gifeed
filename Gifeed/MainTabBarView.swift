@@ -3,13 +3,14 @@
 import ComposableArchitecture
 import SwiftUI
 
-@Reducer 
+@Reducer
 struct MainTabBar {
-  @ObservableState 
+  @ObservableState
   struct State {
     var selectedTab: Tab = .gifs
-    var gifs = Gifs.State()
-    var stickers = Stickers.State()
+    var gifs = Gifs.State(displayType: .gifs)
+    var stickers = Gifs.State(displayType: .stickers)
+    var search = Search.State()
     
     enum Tab: Hashable {
       case gifs
@@ -21,14 +22,16 @@ struct MainTabBar {
     case binding(BindingAction<State>)
     case setSelectedTab(State.Tab)
     case gifs(Gifs.Action)
-    case stickers(Stickers.Action)
+    case stickers(Gifs.Action)
+    case search(Search.Action)
   }
   
   var body: some ReducerOf<Self> {
     BindingReducer()
     
     Scope(state: \.gifs, action: \.gifs) { Gifs() }
-    Scope(state: \.stickers, action: \.stickers) { Stickers() }
+    Scope(state: \.stickers, action: \.stickers) { Gifs() }
+    Scope(state: \.search, action: \.search) { Search() }
     
     Reduce { state, action in
       switch action {
@@ -38,6 +41,8 @@ struct MainTabBar {
       case .gifs:
         return .none
       case .stickers:
+        return .none
+      case .search:
         return .none
       case .binding(_):
         return .none
@@ -50,14 +55,31 @@ struct MainTabBarView: View {
   @Bindable var store: StoreOf<MainTabBar>
   
   var body: some View {
-    TabView(selection: $store.selectedTab.sending(\.setSelectedTab)) {
-      GifsView(store: store.scope(state: \.gifs, action: \.gifs))
-        .tabItem { Label("Gifs", systemImage: "photo.stack") }
-        .tag(MainTabBar.State.Tab.gifs)
-      
-      StickersView(store: store.scope(state: \.stickers, action: \.stickers))
-        .tabItem { Label("Stickers", systemImage: "face.smiling") }
-        .tag(MainTabBar.State.Tab.stickers)
+    NavigationView {
+      VStack {
+        NavigationLink(
+          destination: SearchView(
+            store: store.scope(state: \.search, action: \.search)
+          )
+        ) { SearchHeaderView() }
+        TabView(selection: $store.selectedTab.sending(\.setSelectedTab)) {
+          GifsView(store: store.scope(state: \.gifs, action: \.gifs))
+            .tabItem { Label("Gifs", systemImage: "photo.stack") }
+            .tag(MainTabBar.State.Tab.gifs)
+          
+          GifsView(store: store.scope(state: \.stickers, action: \.stickers))
+            .tabItem { Label("Stickers", systemImage: "face.smiling") }
+            .tag(MainTabBar.State.Tab.stickers)
+        }
+      }
     }
   }
+}
+
+#Preview {
+  MainTabBarView(
+    store: Store(initialState: MainTabBar.State()) {
+      MainTabBar()
+    }
+  )
 }

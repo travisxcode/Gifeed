@@ -4,7 +4,7 @@ import SwiftUI
 import ComposableArchitecture
 
 @Reducer
-struct StickerItem {
+struct GifItem {
   @ObservableState
   struct State: Identifiable {
     var id: String { gifId }
@@ -21,8 +21,8 @@ struct StickerItem {
   }
 }
 
-struct StickerItemView: View {
-  @Bindable var store: StoreOf<StickerItem>
+struct GifItemView: View {
+  @Bindable var store: StoreOf<GifItem>
   
   var body: some View {
     ZStack(alignment: .bottomLeading) {
@@ -33,7 +33,7 @@ struct StickerItemView: View {
           .padding(12)
       }
     }
-    .overlay(Rectangle().stroke(.black, lineWidth: 2))
+    .cornerRadius(4)
   }
   
   private var screenWidth: CGFloat {
@@ -75,9 +75,9 @@ struct StickerItemView: View {
 }
 
 #Preview {
-  StickerItemView(
+  GifItemView(
     store: Store(
-      initialState: StickerItem.State(
+      initialState: GifItem.State(
         user: User(
           avatarUrl: "https://media0.giphy.com/avatars/IntoAction/wTEVurMl2S4g.png",
           username: "IntoAction",
@@ -88,7 +88,7 @@ struct StickerItemView: View {
         height: 360
       )
     ) {
-      StickerItem()
+      GifItem()
     }
   )
 }
