@@ -29,6 +29,8 @@
 		1695144E2BB3BD0A004A11D5 /* GifItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144D2BB3BD0A004A11D5 /* GifItemView.swift */; };
 		169514502BB3C2C1004A11D5 /* GifItemStateMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1695144F2BB3C2C1004A11D5 /* GifItemStateMapper.swift */; };
 		169514542BB3FEC9004A11D5 /* WaterfallGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */; };
+		16B9CE592BDDF64000AB891D /* SearchGifsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B9CE582BDDF64000AB891D /* SearchGifsView.swift */; };
+		16B9CE5C2BDEB65B00AB891D /* SearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B9CE5B2BDEB65B00AB891D /* SearchClient.swift */; };
 		16FCB93F2BC540B200305553 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCB93E2BC540B200305553 /* SearchBarView.swift */; };
 		16FCB9412BC545A200305553 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCB9402BC545A200305553 /* SearchView.swift */; };
 		16FCB9432BC5525400305553 /* SearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCB9422BC5525400305553 /* SearchHeaderView.swift */; };
@@ -76,6 +78,8 @@
 		1695144D2BB3BD0A004A11D5 /* GifItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifItemView.swift; sourceTree = "<group>"; };
 		1695144F2BB3C2C1004A11D5 /* GifItemStateMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifItemStateMapper.swift; sourceTree = "<group>"; };
 		169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridView.swift; sourceTree = "<group>"; };
+		16B9CE582BDDF64000AB891D /* SearchGifsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifsView.swift; sourceTree = "<group>"; };
+		16B9CE5B2BDEB65B00AB891D /* SearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchClient.swift; sourceTree = "<group>"; };
 		16FCB93E2BC540B200305553 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		16FCB9402BC545A200305553 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		16FCB9422BC5525400305553 /* SearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHeaderView.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				169514372BAFA4AC004A11D5 /* Models */,
+				16B9CE5A2BDEB64200AB891D /* Search */,
 				1695142E2BAE675A004A11D5 /* Trending */,
 			);
 			path = Network;
@@ -258,10 +263,19 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		16B9CE5A2BDEB64200AB891D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				16B9CE5B2BDEB65B00AB891D /* SearchClient.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		16FCB93D2BC528D600305553 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				16FCB9402BC545A200305553 /* SearchView.swift */,
+				16B9CE582BDDF64000AB891D /* SearchGifsView.swift */,
 				16FCB93E2BC540B200305553 /* SearchBarView.swift */,
 				16FCB9422BC5525400305553 /* SearchHeaderView.swift */,
 			);
@@ -409,6 +423,7 @@
 				1695142A2BAD2835004A11D5 /* Image.swift in Sources */,
 				169514312BAF62B1004A11D5 /* GifWebView.swift in Sources */,
 				16FCB9432BC5525400305553 /* SearchHeaderView.swift in Sources */,
+				16B9CE592BDDF64000AB891D /* SearchGifsView.swift in Sources */,
 				169514492BB2E4B8004A11D5 /* MainTabBarView.swift in Sources */,
 				169514212BAD0392004A11D5 /* GifsView.swift in Sources */,
 				169514542BB3FEC9004A11D5 /* WaterfallGridView.swift in Sources */,
@@ -420,6 +435,7 @@
 				169513EC2BACED84004A11D5 /* GifeedApp.swift in Sources */,
 				1695143E2BAFAC6A004A11D5 /* TrendingClientMocks.swift in Sources */,
 				169514452BB12235004A11D5 /* ImageCacheRepository.swift in Sources */,
+				16B9CE5C2BDEB65B00AB891D /* SearchClient.swift in Sources */,
 				1695143B2BAFA4D5004A11D5 /* User.swift in Sources */,
 				16FCB93F2BC540B200305553 /* SearchBarView.swift in Sources */,
 				1695144E2BB3BD0A004A11D5 /* GifItemView.swift in Sources */,
