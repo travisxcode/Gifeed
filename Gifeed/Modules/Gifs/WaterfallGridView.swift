@@ -19,8 +19,8 @@ struct WaterfallGrid {
     init(
       items: [GifItem.State] = [],
       numOfColumns: Int = 1,
-      spacing: CGFloat = 10,
-      horizontalPadding: CGFloat = 10
+      spacing: CGFloat = 4,
+      horizontalPadding: CGFloat = 4
     ) {
       self.spacing = spacing
       self.horizontalPadding = horizontalPadding
