@@ -16,4 +16,4 @@ This demo serves as an example TCA project, providing basic examples and more in
 <img src="https://github.com/travisxcode/Gifeed/assets/17330548/51a89c1a-b7e7-4f78-84d5-341b236fc6c6" width="22%" height="22%">
 
 # TCA in the Nutshell
-<img src="https://github.com/travisxcode/Gifeed/assets/17330548/39708407-252a-45bc-b317-19301ac6ddc4" width="65%" height="65%">
+<img src="https://github.com/travisxcode/Gifeed/assets/17330548/58f3a8fe-0e1b-4f58-b57f-204dd7638127" width="70%" height="70%">
