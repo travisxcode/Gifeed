@@ -16,4 +16,11 @@ This demo serves as an example TCA project, providing basic examples and more in
 <img src="https://github.com/travisxcode/Gifeed/assets/17330548/51a89c1a-b7e7-4f78-84d5-341b236fc6c6" width="22%" height="22%">
 
 # TCA in the Nutshell
-<img src="https://github.com/travisxcode/Gifeed/assets/17330548/58f3a8fe-0e1b-4f58-b57f-204dd7638127" width="70%" height="70%">
+<img src="https://github.com/travisxcode/Gifeed/assets/17330548/c9c0450d-578c-4520-9517-b3299c923280" width="70%" height="70%">
+
+To build a feature using the Composable Architecture you define some types and values that model your domain:
+
+- State: A `struct` describes the data for your feature to perform the logic and render the UI, always has the default value.
+- Action: An `enum` type that represents the actions in your feature; user interaction, API network calls, event sources and more.
+- Reducer: A `function` that describes how to evolve the current state of the app to the next state given an action. The reducer is also responsible for returning any effects that should be run, such as API requests, which can be done by returning an Effect value.
+- Store: The runtime that actually drives your feature. You send all user actions to the store so that the store can run the reducer and effects, and you can observe state changes in the store so that you can update UI.
