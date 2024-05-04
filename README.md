@@ -11,7 +11,7 @@ When starting a new project, it's important to consider which design patterns ar
 <img src="https://github.com/travisxcode/Gifeed/assets/17330548/ccdcd708-feba-4d12-bac9-83b71edd3d5b" width="70%" height="70%">
 
 ## TCA in the Nutshell
-<img src="https://github.com/travisxcode/Gifeed/assets/17330548/1f1b8d90-2383-45d4-9940-edf3dc6500a2" width="70%" height="70%">
+<img src="https://github.com/travisxcode/Gifeed/assets/17330548/8babf47c-075b-4c26-9be3-1284df9eb4f9" width="70%" height="70%">
 
 The Composable Architecture (TCA) consists of the following key components:
 
@@ -52,20 +52,15 @@ struct SearchBar {
 The Action enum defines possible actions that can affect the state of the search bar:
 ```swift
 enum Action: BindableAction, Equatable {
-  case binding(BindingAction<State>)
-  case textFieldChanged(String)
-  case textFieldChangedRelay(String)
-  case startSearch(String)
-  case resetSearch
+  case binding(BindingAction<State>) // Supports automatic state mutations through bindings.
+  case textFieldChanged(String) // Triggered when the text field content changes.
+  case textFieldChangedRelay(String) // A relay action used for debouncing text input.
+  case startSearch(String) // Commences the search process.
+  case resetSearch // Resets the search.
 }
 ```
 
 We almost immediately understand the behavior of what this feature component does just from reading list of `enum Action` and this is one of the highlights of `"What's in the TCA box 🎁"`
-- binding: Supports automatic state mutations through bindings.
-- textFieldChanged: Triggered when the text field content changes.
-- textFieldChangedRelay: A relay action used for debouncing text input.
-- startSearch: Commences the search process.
-- resetSearch: Resets the search.
 
 ### Reducer Body
 The body of the reducer manages the state transitions based on actions:
@@ -138,6 +133,126 @@ Typically, when using `BindableAction` and `BindingReducer()` in the reducer's b
 As the name suggests, the architecture enhances the feature component to be systematically `composable`. 😉
 
 <img width="70%" height="70%" src="https://github.com/travisxcode/Gifeed/assets/17330548/75b33783-40db-498f-aa3c-13bab9fe390a">
+
+Here, `State` holds all the data needed for the search process, including the query and specific states for different components like `SearchBar` and `SearchGifs`.
+
+```swift
+@Reducer
+struct Search {
+  @ObservableState
+  struct State {
+    var searchQuery = ""
+    var searchBar = SearchBar.State()
+    var searchGifs = SearchGifs.State()
+  }
+}
+```
+
+The Action enum represents all actions that can be dispatched in our search feature:
+
+> [!Note]
+> `SearchView` is the compositional component, and there's no component that requires handling the binding of SwiftUI view data to the application's state. Therefore, we don't need the action to be a `BindableAction`.
+
+```swift
+enum Action {
+  case searchBar(SearchBar.Action)
+  case searchGifs(SearchGifs.Action)
+  case search
+  case searchSuccess([Gif])
+}
+```
+Actions include binding for state updates, actions specific to the search bar and GIF search results, and actions for initiating and completing a search. The diffenrence from SearchBar action is that we don't need to handle ~~`case binding(BindingAction<State>)`~~
+
+### Defining Actions and Dependencies
+Our reducer also depends on a `searchClient`, which is injected as a dependency. This client handles the network requests to fetch GIFs based on the search query:
+
+```swift
+@Dependency(\.searchClient) var searchClient
+```
+
+### Reducer Logic
+The core functionality is defined in the reducer's body, where we handle various actions:
+
+```swift
+@Reducer
+struct Search {
+  @ObservableState
+  struct State { /* ... */ }
+  enum Action { /* ... */ }
+  
+  @Dependency(\.searchClient) var searchClient
+  private enum CancelID { case gifs, stickers }
+  
+  var body: some ReducerOf<Self> {    
+    Scope(state: \.searchBar, action: \.searchBar) { SearchBar() }
+    Scope(state: \.searchGifs, action: \.searchGifs) { SearchGifs() }
+    
+    Reduce { state, action in
+      switch action {
+      case .searchBar(.startSearch(let text)):
+        state.searchQuery = text
+        guard !state.searchQuery.isEmpty else {
+          state.searchGifs.gifCards = []
+          return .cancel(id: CancelID.gifs)
+        }
+        return .run { send in await send(.search) }
+
+      case .searchBar(.resetSearch):
+        state.searchGifs.gifCards = []
+        return .cancel(id: CancelID.gifs)
+      case .searchBar:
+        return .none
+      case .search:
+        guard !state.searchQuery.isEmpty else { return .none }
+        
+        return .run { [query = state.searchQuery] send in
+          if let gifs = try? await self.searchClient.search(query) {
+            await send(.searchSuccess(gifs))
+          }
+        }
+        .cancellable(id: CancelID.gifs)
+        
+      case .searchSuccess(let gifs):
+        gifs
+          .map { GifItem.State.Mapper.map($0) }
+          .forEach { state.searchGifs.gifCards.insert($0, at: .zero) }
+        return .none
+
+      case .searchGifs:
+        return .none
+      }
+    }
+  }
+}
+```
+
+- Starting and Resetting Search: When a search begins, we update the searchQuery. If the search bar is reset, we clear the search results.
+- Executing Search: Upon dispatching .search, it performs an asynchronous request using searchClient to fetch GIFs.
+- Handling Search Results: The .searchSuccess action processes the returned GIFs and updates the state to display them.
+
+### Building the UI
+The SearchView struct binds our TCA state and actions to the SwiftUI view:
+
+```swift
+struct SearchView: View {
+  var store: StoreOf<Search>
+  
+  var body: some View {
+    VStack {
+      SearchBarView(
+        store: store.scope(state: \.searchBar, action: \.searchBar)
+      )
+      SearchGifsView(
+        store: store.scope(state: \.searchGifs, action: \.searchGifs)
+      )
+    }
+  }
+}
+```
+
+Each component view, such as `SearchBarView` and `SearchGifsView`, is scoped to its respective part of the overall state. This scoping is crucial for maintaining a clean and modular architecture.
+
+Utilizing TCA with SwiftUI allows for a highly modular, testable, and maintainable approach to implementing complex functionalities like a search feature. By organizing the state, actions, and views cohesively, you can ensure that your code are both robust and enjoyable to use. This approach not only streamlines the development process but also enhances the overall quality of your applications.
 
 ## Screenshots
 <img src="https://github.com/travisxcode/Gifeed/assets/17330548/c1fda070-824f-48fd-b56d-fff1fd8d7657" width="22%" height="22%">
