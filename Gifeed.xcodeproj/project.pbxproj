@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1618F56F2BE9B26300F55E8C /* SimpleGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618F56E2BE9B26300F55E8C /* SimpleGifView.swift */; };
 		169513EC2BACED84004A11D5 /* GifeedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169513EB2BACED84004A11D5 /* GifeedApp.swift */; };
 		169513F02BACED86004A11D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169513EF2BACED86004A11D5 /* Assets.xcassets */; };
 		169513F32BACED86004A11D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169513F22BACED86004A11D5 /* Preview Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1618F56E2BE9B26300F55E8C /* SimpleGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleGifView.swift; sourceTree = "<group>"; };
 		169513E82BACED84004A11D5 /* Gifeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gifeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169513EB2BACED84004A11D5 /* GifeedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifeedApp.swift; sourceTree = "<group>"; };
 		169513EF2BACED86004A11D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				1695144D2BB3BD0A004A11D5 /* GifItemView.swift */,
+				1618F56E2BE9B26300F55E8C /* SimpleGifView.swift */,
 				1695144F2BB3C2C1004A11D5 /* GifItemStateMapper.swift */,
 				169514532BB3FEC9004A11D5 /* WaterfallGridView.swift */,
 				169514202BAD0392004A11D5 /* GifsView.swift */,
@@ -423,6 +426,7 @@
 				1695142A2BAD2835004A11D5 /* Image.swift in Sources */,
 				169514312BAF62B1004A11D5 /* GifWebView.swift in Sources */,
 				16FCB9432BC5525400305553 /* SearchHeaderView.swift in Sources */,
+				1618F56F2BE9B26300F55E8C /* SimpleGifView.swift in Sources */,
 				16B9CE592BDDF64000AB891D /* SearchGifsView.swift in Sources */,
 				169514492BB2E4B8004A11D5 /* MainTabBarView.swift in Sources */,
 				169514212BAD0392004A11D5 /* GifsView.swift in Sources */,
